@@ -1,0 +1,60 @@
+{
+  "request_id": "c8ee577e-2705-4cc4-833f-722d267303eb",
+  "timestamp": "2026-03-12T23:11:03.964752+00:00",
+  "source_file": "data/raw/transactions.csv",
+  "rows_ingested": 5,
+  "checks_passed": 10,
+  "checks_failed": 0,
+  "assertions": [
+    {
+      "check": "required_columns_present",
+      "passed": true,
+      "detail": "All required columns present"
+    },
+    {
+      "check": "dataframe_not_empty",
+      "passed": true,
+      "detail": "Row count: 5"
+    },
+    {
+      "check": "no_duplicate_transaction_ids",
+      "passed": true,
+      "detail": "Duplicates found: 0"
+    },
+    {
+      "check": "amount_positive",
+      "passed": true,
+      "detail": "Non-positive amounts: 0"
+    },
+    {
+      "check": "is_anomaly_binary",
+      "passed": true,
+      "detail": "Invalid label values: 0"
+    },
+    {
+      "check": "no_nulls_in_required_columns",
+      "passed": true,
+      "detail": "Null counts: {'transaction_id': 0, 'timestamp': 0, 'merchant_id': 0, 'amount': 0, 'category': 0, 'is_anomaly': 0}"
+    },
+    {
+      "check": "timestamp_parseable",
+      "passed": true,
+      "detail": "All timestamps parseable"
+    },
+    {
+      "check": "amount_within_range",
+      "passed": true,
+      "detail": "Out-of-range amounts: 0"
+    },
+    {
+      "check": "category_non_empty",
+      "passed": true,
+      "detail": "Empty category values: 0"
+    },
+    {
+      "check": "merchant_id_non_empty",
+      "passed": true,
+      "detail": "Empty merchant_id values: 0"
+    }
+  ]
+}

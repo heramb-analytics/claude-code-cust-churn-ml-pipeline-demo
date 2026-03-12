@@ -1,0 +1,69 @@
+{
+  "request_id": "157b3d69-dbde-489e-a117-c2704d05e133",
+  "timestamp": "2026-03-12T23:12:15.102672+00:00",
+  "checks_total": 12,
+  "checks_passed": 12,
+  "checks_failed": 0,
+  "results": [
+    {
+      "check": "features_file_exists",
+      "passed": true,
+      "detail": "data/processed/features.parquet"
+    },
+    {
+      "check": "features_not_empty",
+      "passed": true,
+      "detail": "Rows: 5"
+    },
+    {
+      "check": "target_column_present",
+      "passed": true,
+      "detail": "is_anomaly check"
+    },
+    {
+      "check": "log_amount_feature_present",
+      "passed": true,
+      "detail": "log_amount check"
+    },
+    {
+      "check": "no_infinite_values",
+      "passed": true,
+      "detail": "Infinite values: 0"
+    },
+    {
+      "check": "log_amount_non_negative",
+      "passed": true,
+      "detail": "Negative log_amount rows: 0"
+    },
+    {
+      "check": "amount_zscore_present",
+      "passed": true,
+      "detail": "amount_zscore check"
+    },
+    {
+      "check": "merchant_anomaly_rate_valid_range",
+      "passed": true,
+      "detail": "Out-of-range: 0"
+    },
+    {
+      "check": "hour_of_day_valid_range",
+      "passed": true,
+      "detail": "Invalid hours: 0"
+    },
+    {
+      "check": "day_of_week_valid_range",
+      "passed": true,
+      "detail": "Invalid days: 0"
+    },
+    {
+      "check": "no_nulls_in_numeric_features",
+      "passed": true,
+      "detail": "Null count: 0"
+    },
+    {
+      "check": "sufficient_feature_columns",
+      "passed": true,
+      "detail": "Feature columns found: 13"
+    }
+  ]
+}

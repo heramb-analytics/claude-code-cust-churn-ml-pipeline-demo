@@ -1,0 +1,48 @@
+{
+  "request_id": "e8ce128d-3751-4d95-b17b-24e334ad591e",
+  "timestamp": "2026-03-12T23:12:13.471719+00:00",
+  "total_features": 11,
+  "feature_columns": [
+    "amount",
+    "hour_of_day",
+    "day_of_week",
+    "minute_of_hour",
+    "is_weekend",
+    "log_amount",
+    "amount_zscore",
+    "merchant_anomaly_rate",
+    "category_anomaly_rate",
+    "amount_vs_merchant_mean",
+    "seconds_since_last_txn"
+  ],
+  "target_column": "is_anomaly",
+  "id_columns": [
+    "transaction_id"
+  ],
+  "dtypes": {
+    "amount": "float64",
+    "hour_of_day": "int32",
+    "day_of_week": "int32",
+    "minute_of_hour": "int32",
+    "is_weekend": "int64",
+    "log_amount": "float64",
+    "amount_zscore": "float64",
+    "merchant_anomaly_rate": "float64",
+    "category_anomaly_rate": "float64",
+    "amount_vs_merchant_mean": "float64",
+    "seconds_since_last_txn": "float64"
+  },
+  "null_counts": {
+    "amount": 0,
+    "hour_of_day": 0,
+    "day_of_week": 0,
+    "minute_of_hour": 0,
+    "is_weekend": 0,
+    "log_amount": 0,
+    "amount_zscore": 0,
+    "merchant_anomaly_rate": 0,
+    "category_anomaly_rate": 0,
+    "amount_vs_merchant_mean": 0,
+    "seconds_since_last_txn": 0
+  }
+}

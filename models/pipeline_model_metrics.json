@@ -1,0 +1,46 @@
+{
+  "request_id": "3bbd65e5-cff7-4487-bf50-ff1d184acc37",
+  "timestamp": "2026-03-12T23:15:09.068442+00:00",
+  "algorithm": "XGBoostClassifier",
+  "version": "1.0.0",
+  "best_params": {
+    "n_estimators": 50,
+    "max_depth": 3,
+    "learning_rate": 0.1
+  },
+  "feature_cols": [
+    "amount",
+    "log_amount",
+    "amount_zscore",
+    "amount_vs_merchant_mean",
+    "merchant_anomaly_rate",
+    "category_anomaly_rate",
+    "hour_of_day",
+    "day_of_week",
+    "minute_of_hour",
+    "is_weekend",
+    "seconds_since_last_txn"
+  ],
+  "split_sizes": {
+    "train": 5,
+    "val": 0,
+    "test": 5
+  },
+  "train_metrics": {
+    "accuracy": 0.4,
+    "f1": 0.5714,
+    "precision": 0.4,
+    "recall": 1.0,
+    "roc_auc": 0.5
+  },
+  "val_metrics": {},
+  "test_metrics": {
+    "accuracy": 0.4,
+    "f1": 0.5714,
+    "precision": 0.4,
+    "recall": 1.0,
+    "roc_auc": 0.5
+  },
+  "primary_metric": "f1",
+  "primary_metric_value": 0.5714
+}

@@ -1,0 +1,1 @@
+{"request_id": "d5bb18cd-65ee-4dfd-8ea1-418a88df9246", "timestamp": "2026-03-12T23:21:50.527164+00:00", "is_anomaly": 1, "anomaly_probability": 0.5, "label": "ANOMALY", "amount": 9999.99, "merchant_id": "MCC002", "category": "electronics", "inference_ms": 9.2}
