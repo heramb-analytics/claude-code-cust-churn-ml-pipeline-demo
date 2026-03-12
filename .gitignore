@@ -1,0 +1,16 @@
+# Credentials — never committed
+.env
+*.token
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+
+# Model binaries (large)
+*.pkl
+
+# OS
+.DS_Store
+Thumbs.db

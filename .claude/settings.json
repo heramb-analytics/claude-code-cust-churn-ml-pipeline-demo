@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(**)",
+      "Write(src/**)", "Write(tests/**)", "Write(models/**)",
+      "Write(logs/**)", "Write(reports/**)", "Write(docs/**)",
+      "Write(.claude/**)", "Write(README.md)",
+      "Bash(pytest*)", "Bash(python3*)", "Bash(python*)",
+      "Bash(uvicorn*)", "Bash(curl*)", "Bash(gh*)",
+      "Bash(git add*)", "Bash(git commit*)", "Bash(git push*)",
+      "Bash(git checkout*)", "Bash(git branch*)", "Bash(git worktree*)",
+      "Bash(git remote*)", "Bash(git merge*)",
+      "Bash(ls*)", "Bash(cat*)", "Bash(echo*)", "Bash(tail*)",
+      "Bash(mkdir*)", "Bash(source*)", "Bash(bash*)",
+      "Bash(afplay*)", "Bash(python3 -c*)"
+    ],
+    "deny": [
+      "Write(data/raw/**)",
+      "Bash(rm -rf*)",
+      "Bash(sudo*)"
+    ]
+  }
+}

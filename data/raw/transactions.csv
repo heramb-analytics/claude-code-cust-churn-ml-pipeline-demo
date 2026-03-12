@@ -1,0 +1,6 @@
+transaction_id,timestamp,merchant_id,amount,category,is_anomaly
+TXN001,2024-01-01 09:00:00,MCC001,150.00,retail,0
+TXN002,2024-01-01 09:05:00,MCC002,9999.99,electronics,1
+TXN003,2024-01-01 09:10:00,MCC001,220.50,retail,0
+TXN004,2024-01-01 09:15:00,MCC003,45.00,food,0
+TXN005,2024-01-01 09:20:00,MCC002,8750.00,electronics,1

@@ -1,0 +1,37 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "name": "audit-logger",
+        "description": "Logs every file write to logs/audit.jsonl",
+        "matcher": "Write",
+        "command": "python3 -c \"import json,datetime,os; open('logs/audit.jsonl','a').write(json.dumps({'ts':datetime.datetime.utcnow().isoformat(),'event':'file_write','file':os.environ.get('CLAUDE_TOOL_INPUT_PATH','?'),'stage':os.environ.get('PIPELINE_STAGE','unknown')})+'\n')\" 2>/dev/null || true"
+      },
+      {
+        "name": "stage-sound",
+        "description": "Plays a sound after each significant tool use (Mac only)",
+        "matcher": "Bash",
+        "command": "afplay /System/Library/Sounds/Tink.aiff 2>/dev/null || true"
+      }
+    ],
+    "PostToolError": [
+      {
+        "name": "error-sound",
+        "description": "Plays an error sound on tool failure (Mac only)",
+        "matcher": "*",
+        "command": "afplay /System/Library/Sounds/Sosumi.aiff 2>/dev/null || true"
+      },
+      {
+        "name": "error-logger",
+        "description": "Logs errors to logs/errors.jsonl",
+        "matcher": "*",
+        "command": "python3 -c \"import json,datetime,os; open('logs/errors.jsonl','a').write(json.dumps({'ts':datetime.datetime.utcnow().isoformat(),'event':'tool_error','tool':os.environ.get('CLAUDE_TOOL_NAME','?')})+'\n')\" 2>/dev/null || true"
+      }
+    ]
+  },
+  "sounds": {
+    "stage_complete": "afplay /System/Library/Sounds/Glass.aiff 2>/dev/null || printf '\\a'",
+    "pipeline_complete": "afplay /System/Library/Sounds/Hero.aiff 2>/dev/null || printf '\\a\\a'",
+    "error": "afplay /System/Library/Sounds/Sosumi.aiff 2>/dev/null || printf '\\a'"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "_comment": "Reference only. Register servers via: claude mcp add ... -s user",
+  "_register_commands": [
+    "claude mcp add git -s user -- uvx mcp-server-git",
+    "claude mcp add jira -s user -e JIRA_URL=$JIRA_URL -e JIRA_USERNAME=$JIRA_USER -e JIRA_API_TOKEN=$JIRA_TOKEN -- uvx mcp-atlassian",
+    "claude mcp add confluence -s user -e CONFLUENCE_URL=$CONFLUENCE_URL -e CONFLUENCE_USERNAME=$CONFLUENCE_USER -e CONFLUENCE_PERSONAL_TOKEN=$CONFLUENCE_TOKEN -- uvx mcp-atlassian",
+    "claude mcp add playwright -s user -- npx @playwright/mcp@latest"
+  ],
+  "servers": {
+    "git": {
+      "command": "uvx",
+      "args": ["mcp-server-git"],
+      "scope": "user",
+      "purpose": "Git operations: branch, commit, push, log"
+    },
+    "jira": {
+      "command": "uvx",
+      "args": ["mcp-atlassian"],
+      "scope": "user",
+      "env_vars": ["JIRA_URL", "JIRA_USERNAME", "JIRA_API_TOKEN"],
+      "purpose": "Create projects, epics, tasks, sprints in JIRA"
+    },
+    "confluence": {
+      "command": "uvx",
+      "args": ["mcp-atlassian"],
+      "scope": "user",
+      "env_vars": ["CONFLUENCE_URL", "CONFLUENCE_USERNAME", "CONFLUENCE_PERSONAL_TOKEN"],
+      "purpose": "Create and update Confluence pages in CR space"
+    },
+    "playwright": {
+      "command": "npx",
+      "args": ["@playwright/mcp@latest"],
+      "scope": "user",
+      "purpose": "Browser automation, E2E testing, screenshots"
+    }
+  }
+}
